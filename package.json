@@ -1,6 +1,6 @@
 {
-	"name": "@alessiofrittoli/node-module-starter",
-	"version": "1.18.0",
+	"name": "@alessiofrittoli/tsconfig",
+	"version": "0.1.0",
 	"description": "Starter repository for developing node_modules",
 	"type": "module",
 	"author": {
@@ -20,14 +20,14 @@
 		"npm",
 		"node_modules"
 	],
-	"homepage": "https://github.com/alessiofrittoli/node-module-starter#readme",
+	"homepage": "https://github.com/alessiofrittoli/tsconfig#readme",
 	"bugs": {
-		"url": "https://github.com/alessiofrittoli/node-module-starter/issues",
+		"url": "https://github.com/alessiofrittoli/tsconfig/issues",
 		"email": "info@alessiofrittoli.it"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/alessiofrittoli/node-module-starter.git"
+		"url": "git+https://github.com/alessiofrittoli/tsconfig.git"
 	},
 	"engines": {
 		"node": ">=24.15.0",
@@ -69,7 +69,7 @@
 		"dev": "tsdown --watch",
 		"build": "pnpm lint && pnpm tsdown",
 		"lint": "oxlint --report-unused-disable-directives --max-warnings 0",
-		"release": "node scripts/release.ts --verbose",
+		"release": "node scripts/release.ts --verbose --npm",
 		"//2a": "*********************************************************************",
 		"//2b": "***************************** UNIT TESTS ****************************",
 		"//2c": "*********************************************************************",
@@ -82,11 +82,15 @@
 		"test:coverage": "pnpm test:watch --coverage",
 		"test:coverage:ci": "pnpm test:ci --coverage",
 		"test:serve-coverage": "http-server ./coverage --gzip true -p 0 -o /index.html --silent",
-		"test:coverage:serve": "concurrently --prefix none --kill-others \"pnpm test:coverage\" \"pnpm test:serve-coverage\"",
-		"//4a": "*********************************************************************",
-		"//4b": "******************************* OTHER *******************************",
-		"//4c": "*********************************************************************",
-		"install:tool-deps": "node node_modules/@alessiofrittoli/package-configs/scripts/install-dependencies.cjs"
+		"test:coverage:serve": "concurrently --prefix none --kill-others \"pnpm test:coverage\" \"pnpm test:serve-coverage\""
+	},
+	"peerDependencies": {
+		"typescript": "^6.0.3"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": false
+		}
 	},
 	"devDependencies": {
 		"@alessiofrittoli/node-scripts": "^4.1.0",
