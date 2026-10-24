@@ -1,36 +1,36 @@
-<h1 align="center">Node Module Starter 🛠️</h1>
+<h1 align="center">TSConfig ʦ</h1>
 <h2 align="center">
-  Starter repository for developing node_modules
+  TSConfig utilities
 </h2>
 <p align="center">
-  <a href="https://npmjs.org/package/@alessiofrittoli/node-module-starter">
-    <img src="https://img.shields.io/npm/v/@alessiofrittoli/node-module-starter" alt="Latest version"/>
+  <a href="https://npmjs.org/package/@alessiofrittoli/tsconfig">
+    <img src="https://img.shields.io/npm/v/@alessiofrittoli/tsconfig" alt="Latest version"/>
   </a>
-  <a href="https://coveralls.io/github/alessiofrittoli/node-module-starter">
-    <img src="https://coveralls.io/repos/github/alessiofrittoli/node-module-starter/badge.svg" alt="Test coverage"/>
+  <a href="https://coveralls.io/github/alessiofrittoli/tsconfig">
+    <img src="https://coveralls.io/repos/github/alessiofrittoli/tsconfig/badge.svg" alt="Test coverage"/>
   </a>
-  <a href="https://socket.dev/npm/package/@alessiofrittoli/node-module-starter/overview">
-    <img src="https://socket.dev/api/badge/npm/package/@alessiofrittoli/node-module-starter" alt="Socket Security score"/>
+  <a href="https://socket.dev/npm/package/@alessiofrittoli/tsconfig/overview">
+    <img src="https://socket.dev/api/badge/npm/package/@alessiofrittoli/tsconfig" alt="Socket Security score"/>
   </a>
-  <a href="https://npmjs.org/package/@alessiofrittoli/node-module-starter">
-    <img src="https://img.shields.io/npm/dm/@alessiofrittoli/node-module-starter.svg" alt="npm downloads"/>
+  <a href="https://npmjs.org/package/@alessiofrittoli/tsconfig">
+    <img src="https://img.shields.io/npm/dm/@alessiofrittoli/tsconfig.svg" alt="npm downloads"/>
   </a>
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/dependency-count/@alessiofrittoli/node-module-starter" alt="Dependencies"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/tsconfig">
+    <img src="https://badgen.net/bundlephobia/dependency-count/@alessiofrittoli/tsconfig" alt="Dependencies"/>
   </a>
-  <a href="https://libraries.io/npm/%40alessiofrittoli%2Fnode-module-starter">
-    <img src="https://img.shields.io/librariesio/release/npm/@alessiofrittoli/node-module-starter" alt="Dependencies status"/>
+  <a href="https://libraries.io/npm/%40alessiofrittoli%2Ftsconfig">
+    <img src="https://img.shields.io/librariesio/release/npm/@alessiofrittoli/tsconfig" alt="Dependencies status"/>
   </a>
 </p>
 <p align="center">
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/min/@alessiofrittoli/node-module-starter" alt="minified"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/tsconfig">
+    <img src="https://badgen.net/bundlephobia/min/@alessiofrittoli/tsconfig" alt="minified"/>
   </a>
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/minzip/@alessiofrittoli/node-module-starter" alt="minizipped"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/tsconfig">
+    <img src="https://badgen.net/bundlephobia/minzip/@alessiofrittoli/tsconfig" alt="minizipped"/>
   </a>
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/tree-shaking/@alessiofrittoli/node-module-starter" alt="Tree shakable"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/tsconfig">
+    <img src="https://badgen.net/bundlephobia/tree-shaking/@alessiofrittoli/tsconfig" alt="Tree shakable"/>
   </a>
 </p>
 <p align="center">
@@ -55,40 +55,23 @@
     - [Run tests with coverage](#run-tests-with-coverage)
   - [Contributing](#contributing)
   - [Security](#security)
+- [API Reference](#api-reference)
 - [Credits](#made-with-)
 
 ---
 
-### Getting started (delete once cloned in your project)
+### Getting started
 
-Run the following command to start using `node-module-starter` for your projects:
-
-```bash
-git clone git@github.com:alessiofrittoli/node-module-starter.git && git remote remove origin
-```
-
-install dependencies
+Run the following command to start using `@alessiofrittoli/tsconfig` in your projects:
 
 ```bash
-pnpm i
-```
-
-Read the [Creating a repository from a template - GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for more in-detail informations about creating a new Repository from a template using GitHub web interface.
-
----
-
-### Getting started (customize based on your project needs)
-
-Run the following command to start using `{package_name}` in your projects:
-
-```bash
-npm i {package_name}
+npm i @alessiofrittoli/tsconfig
 ```
 
 or using `pnpm`
 
 ```bash
-pnpm i {package_name}
+pnpm i @alessiofrittoli/tsconfig
 ```
 
 ---
@@ -168,6 +151,107 @@ Help keep this project up to date with [GitHub Sponsor][sponsor-url].
 #### Security
 
 If you believe you have found a security vulnerability, we encourage you to **_responsibly disclose this and NOT open a public issue_**. We will investigate all legitimate reports. Email `security@alessiofrittoli.it` to disclose any security vulnerabilities.
+
+---
+
+### API Reference
+
+#### `parseTsConfig()`
+
+Parse TypeScript configuration file.
+
+<details>
+
+<summary style="cursor:pointer">Parameters</summary>
+
+| Parameter          | Type                   | Default             | Description                                        |
+| ------------------ | ---------------------- | ------------------- | -------------------------------------------------- |
+| `options`          | `ParseTsConfigOptions` | `{}`                | (Optional) An object defining required parameters. |
+| `options.filepath` | `string`               | `"./tsconfig.json"` | (Optional) The TypeScript configuration file path. |
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Throws</summary>
+
+Throws an `Error` if the resolved `filepath` does not exists.
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Returns</summary>
+
+Type: `ParsedCommandLine`
+
+The parsed TypeScript configuration file.
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Examples</summary>
+
+```ts
+import { parseTsConfig } from '@alessiofrittoli/tsconfig'
+
+const parsedTsConfig = parseTsConfig({ filepath: './tsconfig.build.json' })
+```
+
+</details>
+
+---
+
+#### `getTSConfigCompilerTarget()`
+
+Get TypeScript compiler target from resolved configuration file.
+
+<details>
+
+<summary style="cursor:pointer">Parameters</summary>
+
+| Parameter                | Type                   | Default             | Description                                        |
+| ------------------------ | ---------------------- | ------------------- | -------------------------------------------------- |
+| `options`                | `ParseTsConfigOptions` | `{}`                | (Optional) An object defining required parameters. |
+| `options.filepath`       | `string`               | `"./tsconfig.json"` | (Optional) The TypeScript configuration file path. |
+| `options.parsedTsConfig` | `ParsedCommandLine`    | -                   | (Optional) The already parsed TS config.           |
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Returns</summary>
+
+Type: `string | undefined`
+
+The resolved TypeScript compiler target if any, `undefined` otherwise.
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Examples</summary>
+
+```ts
+import { getTSConfigCompilerTarget } from '@alessiofrittoli/tsconfig'
+
+const compilerTarget = getTSConfigCompilerTarget({
+  filepath: './tsconfig.build.json',
+})
+```
+
+</details>
 
 ---
 
